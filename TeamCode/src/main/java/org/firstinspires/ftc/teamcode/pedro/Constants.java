@@ -27,6 +27,8 @@ public class Constants {
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
+                c.analogMinVoltage.set(0.00);
+                c.analogMaxVoltage.set(3.21);
             }
     );
 
@@ -40,6 +42,8 @@ public class Constants {
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
+                c.analogMinVoltage.set(0.000);
+                c.analogMaxVoltage.set(3.212);
             }
     );
 
@@ -53,6 +57,8 @@ public class Constants {
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
+                c.analogMinVoltage.set(0.000);
+                c.analogMaxVoltage.set(3.196);
             }
     );
 
@@ -66,6 +72,8 @@ public class Constants {
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
+                c.analogMinVoltage.set(0.000);
+                c.analogMaxVoltage.set(3.21);
             }
     );
     public static Follower create(HardwareMap h) {
