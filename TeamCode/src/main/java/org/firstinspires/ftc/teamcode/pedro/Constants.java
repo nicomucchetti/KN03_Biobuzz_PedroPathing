@@ -17,63 +17,67 @@ public class Constants {
             }
     );
 
-    public static CoaxialPodConfig rightBack = new CoaxialPodConfig(
+    public static CoaxialPodConfig backRight = new CoaxialPodConfig(
             c -> {
-                c.name.set("rightBack");
-                c.motorName.set("pod1M");
-                c.servoName.set("pod1S");
-                c.servoEncoderName.set("pod1E");
+                c.name.set("backRight");
+                c.motorName.set("backRightM");
+                c.servoName.set("backRightS");
+                c.servoEncoderName.set("backRightE");
                 c.turnController.set(Controller.pid(0.3, 0, 0.005)
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.00);
                 c.analogMaxVoltage.set(3.21);
+                c.angleOffsetRad.set(3.169);
             }
     );
 
-    public static CoaxialPodConfig leftFront = new CoaxialPodConfig(
+    public static CoaxialPodConfig frontLeft = new CoaxialPodConfig(
             c -> {
-                c.name.set("leftFront");
-                c.motorName.set("pod4M");
-                c.servoName.set("pod4S");
-                c.servoEncoderName.set("pod4E");
+                c.name.set("frontLeft");
+                c.motorName.set("frontLeftM");
+                c.servoName.set("frontLeftS");
+                c.servoEncoderName.set("frontLeftE");
                 c.turnController.set(Controller.pid(0.3, 0, 0.005)
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.000);
                 c.analogMaxVoltage.set(3.212);
+                c.angleOffsetRad.set(3.077);
             }
     );
 
-    public static CoaxialPodConfig rightFront = new CoaxialPodConfig(
+    public static CoaxialPodConfig frontRight = new CoaxialPodConfig(
             c -> {
-                c.name.set("rightFront");
-                c.motorName.set("pod3M");
-                c.servoName.set("pod3S");
-                c.servoEncoderName.set("pod3E");
+                c.name.set("frontRight");
+                c.motorName.set("frontRightM");
+                c.servoName.set("frontRightS");
+                c.servoEncoderName.set("frontRightE");
                 c.turnController.set(Controller.pid(0.3, 0, 0.005)
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.000);
                 c.analogMaxVoltage.set(3.196);
+                c.angleOffsetRad.set(3.2635);
             }
     );
 
-    public static CoaxialPodConfig leftBack = new CoaxialPodConfig(
+    public static CoaxialPodConfig backLeft = new CoaxialPodConfig(
             c -> {
-                c.name.set("leftBack");
-                c.motorName.set("pod2M");
-                c.servoName.set("pod2S");
-                c.servoEncoderName.set("pod2E");
+                c.name.set("backLeft");
+                c.motorName.set("backLeftM");
+                c.servoName.set("backLeftS");
+                c.servoEncoderName.set("backLeftE");
                 c.turnController.set(Controller.pid(0.3, 0, 0.0086)
                         .plus(Controller.proportionalFeedforward(0)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.000);
                 c.analogMaxVoltage.set(3.21);
+                c.angleOffsetRad.set(3.1514);
             }
     );
     public static Follower create(HardwareMap h) {
