@@ -16,20 +16,23 @@ public class Constants {
                 c.voltageCompensation.set(false);
             }
     );
-
+    public static double turnkP = 2;
+    public static double turnkI = 0;
+    public static double turnkD = 0.5;
+    public static double turnkV = 0.00;
     public static CoaxialPodConfig backRight = new CoaxialPodConfig(
             c -> {
                 c.name.set("backRight");
                 c.motorName.set("backRightM");
                 c.servoName.set("backRightS");
                 c.servoEncoderName.set("backRightE");
-                c.turnController.set(Controller.pid(0.3, 0, 0.005)
-                        .plus(Controller.proportionalFeedforward(0)));
+                c.turnController.set(Controller.pid(turnkP, turnkI, turnkD)
+                        .plus(Controller.proportionalFeedforward(turnkV)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.00);
                 c.analogMaxVoltage.set(3.21);
-                c.angleOffsetRad.set(3.169);
+                c.angleOffsetRad.set(3.169-(3.14159/2));
             }
     );
 
@@ -39,13 +42,13 @@ public class Constants {
                 c.motorName.set("frontLeftM");
                 c.servoName.set("frontLeftS");
                 c.servoEncoderName.set("frontLeftE");
-                c.turnController.set(Controller.pid(0.3, 0, 0.005)
-                        .plus(Controller.proportionalFeedforward(0)));
+                c.turnController.set(Controller.pid(turnkP, turnkI, turnkD)
+                        .plus(Controller.proportionalFeedforward(turnkV)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.000);
                 c.analogMaxVoltage.set(3.212);
-                c.angleOffsetRad.set(3.077);
+                c.angleOffsetRad.set(3.077-(3.14159/2));
             }
     );
 
@@ -55,13 +58,13 @@ public class Constants {
                 c.motorName.set("frontRightM");
                 c.servoName.set("frontRightS");
                 c.servoEncoderName.set("frontRightE");
-                c.turnController.set(Controller.pid(0.3, 0, 0.005)
-                        .plus(Controller.proportionalFeedforward(0)));
+                c.turnController.set(Controller.pid(turnkP, turnkI, turnkD)
+                        .plus(Controller.proportionalFeedforward(turnkV)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.000);
                 c.analogMaxVoltage.set(3.196);
-                c.angleOffsetRad.set(3.2635);
+                c.angleOffsetRad.set(3.2635-(3.14159/2));
             }
     );
 
@@ -71,13 +74,13 @@ public class Constants {
                 c.motorName.set("backLeftM");
                 c.servoName.set("backLeftS");
                 c.servoEncoderName.set("backLeftE");
-                c.turnController.set(Controller.pid(0.3, 0, 0.0086)
-                        .plus(Controller.proportionalFeedforward(0)));
+                c.turnController.set(Controller.pid(turnkP, turnkI, turnkD)
+                        .plus(Controller.proportionalFeedforward(turnkV)));
                 c.driveDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.servoDirection.set(DcMotorSimple.Direction.FORWARD);
                 c.analogMinVoltage.set(0.000);
                 c.analogMaxVoltage.set(3.21);
-                c.angleOffsetRad.set(3.1514);
+                c.angleOffsetRad.set(3.1514-(3.14159/2));
             }
     );
     public static Follower create(HardwareMap h) {
